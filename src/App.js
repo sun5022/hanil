@@ -8,13 +8,13 @@ function App() {
           <div className="logo-container" onClick={() => console.log("ss")}>
             <img
               className="logoImg"
-              src="/img/logo_solar.svg"
+              src={process.env.PUBLIC_URL+"/img/logo_solar.svg"}
               title="회사 로고"
               alt=""
             />
             <img
               className="logoImg"
-              src="/img/logo_title.svg"
+              src={process.env.PUBLIC_URL+"/img/logo_title.svg"}
               title="회사 로고"
               alt=""
             />
@@ -144,13 +144,13 @@ function App() {
         </div>
 
         <div className="section-solen-sun">
-          <img src="/img/sun.png" alt="" />
+          <img src={process.env.PUBLIC_URL+"/img/sun.png"} alt="" />
         </div>
         <div className="section-solen-logo">
-          <img src="/img/white_solen.svg" alt="" />
+          <img src={process.env.PUBLIC_URL+"/img/white_solen.svg"} alt="" />
         </div>
         <div className="section-solen-forest">
-          <img src="/img/forest.svg" alt="" />
+          <img src={process.env.PUBLIC_URL+"/img/forest.svg"} alt="" />
         </div>
       </section>
       <section className="section-deal">
@@ -181,7 +181,7 @@ function App() {
           <span className="bold">태양광 All in one 플랫폼</span>을 경험해보세요.
         </p>
         <div className="section-deal-tree">
-          <img src="/img/forest_2.svg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/img/forest_2.svg"} alt="" />
         </div>
       </section>
 
@@ -203,7 +203,7 @@ function App() {
 
       <section className="section-ecosystem">
         <div className="section-ecosystem-comma">
-          <img src="/img/comma_start.svg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/img/comma_start.svg"} alt="" />
         </div>
         <p className="section-ecosystem-text-1">
           <span>오! 놀라운 태양광발전소 거래 생태계</span>
