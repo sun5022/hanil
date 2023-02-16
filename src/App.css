@@ -1,38 +1,509 @@
-.App {
-  text-align: center;
+@import url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-size: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+img {
+  vertical-align: middle;
+}
+a img,
+Link img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+address,
+em,
+i {
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  /** color **/
+  --baseColor: #000;
+  --yellowColor: #fe9f45;
+  /** size **/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bold {
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 16px;
+  color: var(--baseColor);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--baseColor);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  left: 0;
+  background: rgb(255 255 255 / 86%);
+  z-index: 1;
+}
+
+header img {
+  height: 56px;
+  padding: 0 2px;
+}
+
+header > div {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+
+.main-menu {
+  display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  padding: 0px 0px;
+  /* overflow: hidden; */
+}
+.main-menu > li {
+  padding: 0 5px;
+  margin-top: 5px;
+  width: 120px;
+  list-style-type: none;
+  position: relative;
+}
+
+.menu-text-container {
+  position: relative;
+}
+.menu-text-top {
+  position: absolute;
+  left: 50%;
+  font-size: 12px;
+  width: 140%;
+  top: -20px;
+  transform: translateX(-50%);
+  color: #666;
+}
+
+.main-menu > li > a {
+  position: relative;
+  display: inline-block;
+  line-height: 56px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+.main-menu > li.active > a,
+.main-menu > li:hover > a {
+  color: var(--yellowColor);
+}
+.main-menu > li > a:after {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--yellowColor);
+  left: 0;
+  bottom: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.main-menu > li.active > a:after,
+.main-menu > li:hover > a:after {
+  opacity: 1;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  text-align: center;
+  line-height: 34px;
+  list-style: none;
+  top: 58px;
+  left: 50%;
+  width: 120%;
+  transform: translateX(-50%);
+
+  background-color: rgb(93 93 93 / 86%);
+
+  font-weight: lighter;
+  border-radius: 5px;
+  /* display block 으로 서브메뉴 애니메이션이 동작안함 */
+  transition: all 0.2s 0.3s;
+  opacity: 0;
+}
+
+.main-menu :nth-child(3) .sub-menu {
+  width: 160%;
+}
+
+.main-menu :nth-child(4) .sub-menu {
+  width: 140%;
+}
+
+.sub-menu > li > a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-menu > li:hover .sub-menu {
+  display: block;
+  opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right-menu {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  border: none;
+  width: 160px;
+  height: 32px;
+  outline: none;
+}
+
+.input-text:active {
+  border: none;
+}
+
+.search-icon {
+  background-color: #df542e;
+  padding: 9px;
+  font-size: 20px;
+  vertical-align: bottom;
+  color: white;
+}
+.login-icon {
+  color: black;
+  background-color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* section-1 */
+.section-solen {
+  width: 100%;
+  height: 440px;
+  background-color: #fe9f45;
+  box-shadow: 0px 0px 0px #cc8037, 0px -2px 1px #cc8037;
+  position: relative;
+}
+
+.section-solen-box {
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.section-box-text-1 {
+  display: block;
+  animation: moveInLeft 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+.section-box-text-2 {
+  animation: moveInLeft 0.5s ease-out 0.2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
   }
-  to {
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-solen-sun {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  animation: rotate_image 20s linear infinite;
+  transform-origin: 50% 50%;
+}
+.section-solen-sun img {
+  height: 180px;
+}
+
+@keyframes rotate_image {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+.section-solen-logo {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  animation: motion 3s linear 1s infinite;
+  margin-top: 0;
+}
+.section-solen-logo img {
+  height: 130px;
+}
+
+.section-solen-logo img:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  color: #df542e;
+}
+.section-solen-forest {
+  position: absolute;
+  bottom: 10px;
+  right: 10%;
+}
+.section-solen-forest img {
+  height: 180px;
+}
+
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  20% {
+    margin-top: -10px;
+  }
+  40% {
+    margin-top: 0px;
+  }
+  60% {
+    margin-top: 0px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.section-deal {
+  height: 700px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.section-oh {
+  background-color: #fe9f45;
+  height: 350px;
+}
+
+.section-deal-text-1,
+.section-deal-text-2 {
+  font-weight: 500;
+  font-size: 40px;
+  animation: moveInBottom 1s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+.section-deal-text-1 > span {
+  display: block;
+}
+.section-deal-text-2 > span {
+  display: inline;
+  position: relative;
+}
+
+.section-deal-text-1 {
+  padding-top: 50px;
+}
+
+.section-deal-text-2 span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  background-color: #fe9f45;
+  width: 100%;
+  height: 40%;
+  z-index: -1;
+
+  animation: moveInBottom 1s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.section-deal-text-3 {
+  padding-top: 50px;
+  display: block;
+  font-weight: 300;
+  font-size: 30px;
+  animation: moveInBottom 1s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+
+.section-deal-text-3 span {
+  display: block;
+}
+
+.section-deal-text-4 {
+  padding-top: 50px;
+  display: block;
+  font-weight: 300;
+  font-size: 30px;
+  animation: moveInBottom 1s ease-out 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.section-deal-text-4 span:first-child {
+  display: block;
+}
+.section-deal-tree {
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  animation: moveInBottom 1s ease-out 2s;
+  animation-fill-mode: backwards;
+}
+.section-deal-tree{
+  width: 100%;
+}
+.section-deal-tree img {
+
+  height: 200px;
+  text-align: center;
+
 }
