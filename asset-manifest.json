@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hanil/static/css/main.3556381a.css",
-    "main.js": "/hanil/static/js/main.3a81ef15.js",
+    "main.js": "/hanil/static/js/main.000e503f.js",
     "static/js/787.62eb83e9.chunk.js": "/hanil/static/js/787.62eb83e9.chunk.js",
     "index.html": "/hanil/index.html",
     "main.3556381a.css.map": "/hanil/static/css/main.3556381a.css.map",
-    "main.3a81ef15.js.map": "/hanil/static/js/main.3a81ef15.js.map",
+    "main.000e503f.js.map": "/hanil/static/js/main.000e503f.js.map",
     "787.62eb83e9.chunk.js.map": "/hanil/static/js/787.62eb83e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3556381a.css",
-    "static/js/main.3a81ef15.js"
+    "static/js/main.000e503f.js"
   ]
 }
