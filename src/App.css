@@ -423,10 +423,7 @@ header > div {
   margin: 0 auto;
 }
 
-.section-oh {
-  background-color: #fe9f45;
-  height: 350px;
-}
+
 
 .section-deal-text-1,
 .section-deal-text-2 {
@@ -506,4 +503,68 @@ header > div {
   height: 200px;
   text-align: center;
 
+}
+
+.section-oh {
+  background-color: #fe9f45;
+  height: 350px;
+  text-align: center;
+}
+
+.section-oh-text-1,
+.section-oh-text-2 {
+  font-weight: 500;
+  font-size: 40px;
+  animation: moveInBottom 1s ease-out ;
+  animation-fill-mode: backwards;
+  color: white;
+}
+.section-oh-text-1{
+  padding-top: 50px;
+}
+
+.section-oh-text-3{
+  padding-top: 50px;
+}
+.section-oh-text-3 > span{
+  font-weight: 400;
+  font-size: 30px;
+  animation: moveInBottom 1s ease-out 2s;
+  animation-fill-mode: backwards;
+  color: black;
+  display: block;
+}
+
+.section-ecosystem{
+  height: 1050px;
+}
+.section-ecosystem-comma{
+  padding-top: 50px;
+  text-align: center;
+
+}
+.section-ecosystem-comma img{
+  height: 80px;
+}
+
+.section-ecosystem-text-1 {
+  width: 100%;
+  text-align: center;
+}
+.section-ecosystem-text-1 > span{
+  padding-top: 50px;
+  display: block;
+  font-size: 50px;
+  font-weight: 600;
+  color : #FE9F45;
+}
+
+.section-ecosystem-text-2 {
+  width: 100%;
+  text-align: center;
+}
+.section-ecosystem-text-2 > span{
+  font-size: 70px;
+  font-weight: 700;
+  color : #FE9F45;
 }

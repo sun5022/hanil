@@ -186,38 +186,43 @@ function App() {
       </section>
 
       <section className="section-oh">
-        <div className="section-oh-box">
-          <p className="section-oh-text-1">
-            <span>Oh(감탄사) + 쏠라(태양) + 'ren'own (명성)</span>
-          </p>
-          <p className="section-oh-text-2">
-            <span>=오쏠렌</span>
-          </p>
-          <p className="section-oh-text-3">
-            <span>
-              오쏠렌은 그동안 경험하지 못한, 새로움을 가미한 에너지 올인원
-              플랫폼입니다.
-            </span>
-            <span>어려운 태양광? 이제는 쉽게 오쏠렌에서 만나보세요.</span>
-          </p>
-        </div>
+        <p className="section-oh-text-1">
+          <span>Oh(감탄사) + 쏠라(태양) + 'ren'own (명성)</span>
+        </p>
+        <p className="section-oh-text-2">
+          <span>=오쏠렌</span>
+        </p>
+        <p className="section-oh-text-3">
+          <span>
+            오쏠렌은 그동안 경험하지 못한, 새로움을 가미한 에너지 올인원
+            플랫폼입니다.
+          </span>
+          <span>어려운 태양광? 이제는 쉽게 오쏠렌에서 만나보세요.</span>
+        </p>
       </section>
 
       <section className="section-ecosystem">
-        <div className="section-ecosystem-tree">
-          <img src="/img/forest.svg" alt="" />
+        <div className="section-ecosystem-comma">
+          <img src="/img/comma_start.svg" alt="" />
         </div>
         <p className="section-ecosystem-text-1">
           <span>오! 놀라운 태양광발전소 거래 생태계</span>
+        </p>
+        <p className="section-ecosystem-text-2">
           <span>무료 발전소 P2P거래 with 오쏠렌</span>
         </p>
-        <div>{/* 라인 */}</div>
-        {/* 아이템3개 */}
 
-        <p className="section-ecosystem-text-2">
-          <span>태양광 생태계를 통한 Green 프로젝트</span>
-          <span>여러분의 이익이 환경의 이익입니다</span>
+        {/* <p className="section-ecosystem-text-3">
+          <span>무료 발전소 P2P거래 with 오쏠렌</span>
         </p>
+        
+
+        <p className="section-ecosystem-text-4">
+          <span>태양광 생태계를 통한 Green 프로젝트</span>
+        </p>
+        <p className="section-ecosystem-text-5">
+          <span>여러분의 이익이 환경의 이익입니다</span>
+        </p> */}
       </section>
 
       <section className="section-price">{/* 아이템 3개 */}</section>
